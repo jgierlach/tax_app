@@ -5,7 +5,6 @@ import Register from '@pages/Register.vue'
 import EmailConfirm from '@pages/EmailConfirm.vue'
 import ResetPassword from '@pages/ResetPassword.vue'
 import ForgotPassword from '@pages/ForgotPassword.vue'
-import Contacts from './pages/Contacts.vue'
 
 export default new Router({
   mode: 'history',
@@ -21,10 +20,6 @@ export default new Router({
     {
       path: '/',
       component: Home
-    },
-    {
-      path: '/contacts',
-      component: Contacts
     },
     {
       path: '/auth/passwords/email',
