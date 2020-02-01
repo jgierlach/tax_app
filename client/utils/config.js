@@ -1,4 +1,4 @@
-const { token } = JSON.parse(localStorage.getItem('auth'))
+const { token } = JSON.parse(localStorage.getItem('auth')) || ""
 
 export default {
   headers: {
