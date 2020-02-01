@@ -1,4 +1,4 @@
-/* @import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700);
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
@@ -11,8 +11,8 @@ body {
 .shadow[data-v-3cbe68da] {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
 }
-.margin-top[data-v-3cbe68da] {
-  margin-top: 3rem;
+.bg-custom[data-v-3cbe68da] {
+  background: rgb(245, 249, 254);
 }
 
 
@@ -23,6 +23,18 @@ body {
 
 .shadow[data-v-3ce3bf1e] {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 1s;
+}
+.fade-leave-active {
+  transition: opacity 1s;
+  opacity: 0;
 }
 
 
@@ -39,5 +51,5 @@ from {
 to {
         transform: rotate(360deg);
 }
-} */
+}
 

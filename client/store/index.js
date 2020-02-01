@@ -13,22 +13,22 @@ export default new Vuex.Store({
     flash
   },
   state: {
-    selectedQuoteText: 'How will you inspire your friends today?',
-    selectedQuoteAuthor: '',
-    contacts: [],
-    contactSendList: [],
+    companies: [],
   },
   actions: {
-    async newContact({ state, dispatch }, contact) {
-      const response = await axios.post('/api/v1/contacts/new', contact, headers)
+    async createContact({ state, dispatch }, contact) {
+      console.log("createContact action")
+      const response = await axios.post('/api/v1/contacts/new', contact)
+      console.log('response', response)
       const contactId = response.data._id
-      await axios.post('/api/v1/contacts/add', { 'contactId': contactId }, headers)
-      dispatch('fetchContacts')
+      await axios.post('/api/v1/contacts/add', { 'contactId': contactId })
     },
     async fetchContacts({ state }) {
       try {
+        console.log('fetchContacts fired')
         const response = await axios.get('/api/v1/contacts', headers)
-        state.contacts = response.data
+        console.log('response', response)
+        state.companies = response.data
       } catch (err) {
         console.error(err)
       }
@@ -52,12 +52,6 @@ export default new Vuex.Store({
     },
     removeContactFromSendList(state, payload) {
       state.contactSendList.splice(state.contactSendList.findIndex(contact => contact.name === payload.name), 1);
-    },
-    updateSelectedQuoteText(state, quote) {
-      state.selectedQuoteText = quote.quote
-    },
-    updateSelectedQuoteAuthor(state, quote) {
-      state.selectedQuoteAuthor = quote.author
     },
     resetContactsFromSendList(state, payload) {
       state.contactSendList = []

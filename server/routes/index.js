@@ -43,14 +43,14 @@ router.post(
   authController.resendConfirmEmail
 )
 
-router.get('/api/v1/contacts', authMiddleware, contactsController.displayAllContacts)
+router.get('/api/v1/contacts', authMiddleware, contactsController.fetchAllContacts)
 
 router.post('/api/v1/contacts/delete', authMiddleware, contactsController.deleteContact)
 
-router.post('/api/v1/contacts/new', authMiddleware, contactsController.newContact)
+router.post('/api/v1/contacts/new', contactsController.newContact)
 
-router.post('/api/v1/contacts/add', authMiddleware, contactsController.addContact)
+router.post('/api/v1/contacts/add', contactsController.addContact)
 
-router.post('/api/v1/quotes/send', authMiddleware, quoteController.sendQuoteToContacts)
+router.post('/api/v1/quotes/send', quoteController.sendQuoteToContacts)
 
 export default router
