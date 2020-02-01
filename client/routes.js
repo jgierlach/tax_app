@@ -5,6 +5,7 @@ import Register from '@pages/Register.vue'
 import EmailConfirm from '@pages/EmailConfirm.vue'
 import ResetPassword from '@pages/ResetPassword.vue'
 import ForgotPassword from '@pages/ForgotPassword.vue'
+import SubmissionConfirmed from './pages/SubmissionConfirmed.vue'
 
 export default new Router({
   mode: 'history',
@@ -20,6 +21,10 @@ export default new Router({
     {
       path: '/',
       component: Home
+    },
+    {
+      path: '/submission-confirmed',
+      component: SubmissionConfirmed
     },
     {
       path: '/auth/passwords/email',

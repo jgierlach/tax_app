@@ -1,5 +1,5 @@
 <template>
-  <div class>
+  <!-- <div class>
     <Flash />
     <div
       class="w-full h-12 text-brown bg-gold-lightest flex items-center justify-center"
@@ -26,7 +26,40 @@
         <span class="cursor-pointer text-brown hover:text-brown-darkest" @click="unsetAuth">Logout</span>
       </div>
     </div>
-  </div>
+  </div>-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">
+            Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -46,3 +79,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.shadow {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
+}
+</style>

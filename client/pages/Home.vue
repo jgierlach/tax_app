@@ -1,10 +1,17 @@
 <template>
-  <div class="my-32">
-    <h1 class="text-center text-brown" v-if="!auth">Mevn Auth</h1>
-    <h1 class="text-center" v-else>Welcome, {{ user.name }}</h1>
+  <div class="container">
+    <!-- <h1 class="text-center mt-4" v-if="!auth">Mevn Auth</h1> -->
+    <!-- <h1 class="text-center" v-else>Welcome, {{ user.name }}</h1> -->
+    <IntakeForm />
   </div>
 </template>
 
 <script>
-export default {}
+import IntakeForm from '../components/IntakeForm.vue'
+
+export default {
+  components: {
+    IntakeForm
+  }
+}
 </script>

@@ -1,4 +1,43 @@
-h1 {
-    color: red;
+/* @import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700);
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #fefbfa !important;
 }
+  
+
+.shadow[data-v-3cbe68da] {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
+}
+.margin-top[data-v-3cbe68da] {
+  margin-top: 3rem;
+}
+
+
+.shadow[data-v-48d439da] {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.shadow[data-v-3ce3bf1e] {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.loader[data-v-04d2e596] {
+    animation-name: spin-data-v-04d2e596;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin-data-v-04d2e596 {
+from {
+        transform: rotate(0deg);
+}
+to {
+        transform: rotate(360deg);
+}
+} */
 
