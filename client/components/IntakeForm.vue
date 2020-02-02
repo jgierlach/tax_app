@@ -1,14 +1,14 @@
 <template>
   <transition name="fade" appear>
     <form class="bg-white p-4 mt-5 mb-5 shadow border-rounded">
-      <h1 class="text-center">Intake Form</h1>
+      <h1 class="text-center">Information For Compliance</h1>
       <div class="form-group">
         <label for="formGroupExampleInput">Full Name</label>
         <input
           type="text"
           class="form-control"
           id="formGroupExampleInput"
-          placeholder="Example input"
+          placeholder="John Doe"
           v-model="name"
         />
       </div>
@@ -18,7 +18,7 @@
           type="text"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Another input"
+          placeholder="johndoe@email.com"
           v-model="email"
         />
       </div>
@@ -28,8 +28,18 @@
           type="text"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Another input"
+          placeholder="+1 (847) 222 4444"
           v-model="phoneNumber"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Legal Name Of Business</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput2"
+          placeholder="Hometown Industries LLC"
+          v-model="businessLegalName"
         />
       </div>
       <div class="form-group">
@@ -38,7 +48,7 @@
           type="text"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Another input"
+          placeholder="93 8383838 3820202 20002"
           v-model="ein"
         />
       </div>
@@ -48,7 +58,7 @@
           type="text"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Another input"
+          placeholder="1234 hollywood blvd"
           v-model="corporateAddress"
         />
       </div>
@@ -58,7 +68,7 @@
           type="text"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Another input"
+          placeholder="New Mexico"
           v-model="stateOfIncorporation"
         />
       </div>
@@ -68,7 +78,7 @@
           type="text"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Another input"
+          placeholder="12/24/1998"
           v-model="dateOfIncorporation"
         />
       </div>
@@ -88,7 +98,8 @@ export default {
       ein: '',
       corporateAddress: '',
       stateOfIncorporation: '',
-      dateOfIncorporation: ''
+      dateOfIncorporation: '',
+      businessLegalName: ''
     }
   },
   methods: {
@@ -106,7 +117,8 @@ export default {
         ein: this.ein,
         corporateAddress: this.corporateAddress,
         stateOfIncorporation: this.stateOfIncorporation,
-        dateOfIncorporation: this.dateOfIncorporation
+        dateOfIncorporation: this.dateOfIncorporation,
+        businessLegalName: this.businessLegalName
       }
     }
   }

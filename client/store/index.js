@@ -14,14 +14,15 @@ export default new Vuex.Store({
   },
   state: {
     companies: [],
+    selectedCompany: {}
   },
   actions: {
     async createContact({ state, dispatch }, contact) {
       console.log("createContact action")
       const response = await axios.post('/api/v1/contacts/new', contact)
       console.log('response', response)
-      const contactId = response.data._id
-      await axios.post('/api/v1/contacts/add', { 'contactId': contactId })
+      // const contactId = response.data._id
+      // await axios.post('/api/v1/contacts/add', { 'contactId': contactId })
     },
     async fetchContacts({ state }) {
       try {
@@ -29,6 +30,16 @@ export default new Vuex.Store({
         const response = await axios.get('/api/v1/contacts', headers)
         console.log('response', response)
         state.companies = response.data
+      } catch (err) {
+        console.error(err)
+      }
+    },
+    async fetchSingleContact({ state, commit }, contactId) {
+      try {
+        console.log('fetchSingleContact fired')
+        const response = await axios.get(`/api/v1/contacts/${contactId}`, headers)
+        console.log('response.data', response.data)
+        commit("updateSelectedCompany", response.data)
       } catch (err) {
         console.error(err)
       }
@@ -55,6 +66,9 @@ export default new Vuex.Store({
     },
     resetContactsFromSendList(state, payload) {
       state.contactSendList = []
+    },
+    updateSelectedCompany(state, payload) {
+      state.selectedCompany = payload
     }
   }
 })

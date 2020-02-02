@@ -4,7 +4,7 @@
       <div class="jumbotron text-center mt-5">
         <h1 class="display-3">Success!</h1>
         <p class="lead">
-          <strong>Someone from out team will be contacting you shortly!</strong> We look forward to working with you.
+          <strong>Someone from our team will be contacting you shortly!</strong> We look forward to working with you.
         </p>
         <hr />
         <p>

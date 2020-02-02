@@ -7,6 +7,7 @@ import ResetPassword from '@pages/ResetPassword.vue'
 import ForgotPassword from '@pages/ForgotPassword.vue'
 import SubmissionConfirmed from './pages/SubmissionConfirmed.vue'
 import Companies from './pages/Companies.vue'
+import CompanyDetails from './components/CompanyDetails.vue'
 
 export default new Router({
   mode: 'history',
@@ -32,6 +33,10 @@ export default new Router({
       component: Companies
     },
     {
+      path: '/companies/:id',
+      component: CompanyDetails
+    },
+    {
       path: '/auth/passwords/email',
       component: ForgotPassword
     },
@@ -43,5 +48,8 @@ export default new Router({
       path: '/auth/emails/confirm/:token',
       component: EmailConfirm
     }
-  ]
+  ],
+  scrollBehavior() {
+    window.scrollTo(0, 0)
+  }
 })

@@ -8,7 +8,17 @@ const ContactSchema = new mongoose.Schema({
   ein: String,
   corporateAddress: String,
   stateOfIncorporation: String,
-  dateOfIncorporation: String
+  dateOfIncorporation: String,
+  businessLegalName: String
 })
 
 export default mongoose.model('Contact', ContactSchema)
+
+// Business legal name
+// EIN
+// Corporate Address
+// Contact Name
+// Phone number
+// Email
+// State of Incorporation
+// Date of Incorporation
