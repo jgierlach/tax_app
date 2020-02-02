@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <form class="bg-white p-4 mt-5 mb-5 shadow border-rounded">
       <h1 class="text-center">Information For Compliance</h1>
-      <div class="form-group">
+      <div class="form-group col-xs-4">
         <label for="formGroupExampleInput">Full Name</label>
         <input
           type="text"
@@ -12,7 +12,7 @@
           v-model="name"
         />
       </div>
-      <div class="form-group">
+      <div class="form-group col-xs-4">
         <label for="formGroupExampleInput2">Email</label>
         <input
           type="text"

@@ -7,7 +7,7 @@ import ResetPassword from '@pages/ResetPassword.vue'
 import ForgotPassword from '@pages/ForgotPassword.vue'
 import SubmissionConfirmed from './pages/SubmissionConfirmed.vue'
 import Companies from './pages/Companies.vue'
-import CompanyDetails from './components/CompanyDetails.vue'
+import CompanyDetails from './pages/CompanyDetails.vue'
 
 export default new Router({
   mode: 'history',
