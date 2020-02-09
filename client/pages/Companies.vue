@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-center mt-4">Companies</h1>
+    <h1 class="text-center mt-4">Welcome {{ user.name }}, you have work to do.</h1>
     <div class="row">
       <CompanyCard v-for="company in companies" :company="company" :key="company._id" />
     </div>

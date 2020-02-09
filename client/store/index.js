@@ -45,8 +45,8 @@ export default new Vuex.Store({
       commit("updateSelectedQuoteText", quote)
       commit("updateSelectedQuoteAuthor", quote)
     },
-    async sendQuoteToContacts({ state }, contact) {
-      await axios.post('/api/v1/quotes/send', { to: contact.phoneNumber, from: '+18632690689', body: `Some inspiration from ${state.auth.user.name} \n ${state.selectedQuoteText} \n -${state.selectedQuoteAuthor}` }, headers)
+    async sendQuoteToContacts() {
+      await axios.post('/api/v1/quotes/send', { to: '12246450847', from: '+18632690689', body: `Holy shit somebody submitted the form` }, headers)
     }
   },
   mutations: {

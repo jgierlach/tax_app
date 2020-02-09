@@ -21,6 +21,11 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'Lato', sans-serif !important;
+  background: white;
+}
+
 .fade-enter {
   opacity: 0;
 }

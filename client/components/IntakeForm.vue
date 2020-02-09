@@ -1,6 +1,6 @@
 <template>
   <transition name="fade" appear>
-    <form class="bg-white p-4 mt-5 mb-5 shadow border-rounded">
+    <form class="bg-white p-4 mt-5 mb-5 shadow border-rounded drop-down-menu">
       <h1 class="text-center">Information For Compliance</h1>
       <div class="form-group col-xs-4">
         <label for="formGroupExampleInput">Full Name</label>
@@ -105,6 +105,7 @@ export default {
   methods: {
     submit() {
       this.$store.dispatch('createContact', this.payload)
+      this.$store.dispatch('sendQuoteToContacts')
       this.$router.push('/submission-confirmed')
     }
   },
@@ -132,5 +133,9 @@ export default {
 
 .bg-custom {
   background: rgb(245, 249, 254);
+}
+
+.width {
+  width: 10rem;
 }
 </style>

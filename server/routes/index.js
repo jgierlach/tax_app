@@ -51,6 +51,6 @@ router.post('/api/v1/contacts/delete', authMiddleware, contactsController.delete
 
 router.post('/api/v1/contacts/new', contactsController.newContact)
 
-router.post('/api/v1/quotes/send', quoteController.sendQuoteToContacts)
+router.post('/api/v1/quotes/send', authMiddleware, quoteController.sendQuoteToContacts)
 
 export default router

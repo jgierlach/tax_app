@@ -36,14 +36,20 @@
 </template>
 
 <script>
+import axios from 'axios'
+import headers from '../utils/config'
+
 export default {
-  mounted() {
-    console.log('this.$route.params.id', this.$route.params.id)
-    this.$store.dispatch('fetchSingleContact', this.$route.params.id)
+  async mounted() {
+    const response = await axios.get(
+      `/api/v1/contacts/${this.$route.params.id}`,
+      headers
+    )
+    this.company = response.data
   },
-  computed: {
-    company() {
-      return this.$store.state.selectedCompany
+  data() {
+    return {
+      company: {}
     }
   }
 }
